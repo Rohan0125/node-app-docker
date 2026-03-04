@@ -2,27 +2,19 @@ pipeline {
     agent any
 
     stages {
-
-        stage('clone') {
-            steps {
-                echo 'Building the application...'
-                // Example build command
-            }
-        }
-
         stage('Build Docker image') {
             steps {
-                echo 'Running tests...'
+                echo 'Building Docker image...'
                 sh 'docker build -t node-app:latest .'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'Deploying application...'
-                sh 'docker compose up -d --build'
+                echo 'Deploying containers...'
+                sh 'docker-compose down'   // Docker Compose V1 command
+                sh 'docker-compose up -d --build'   // Docker Compose V1 command
             }
         }
-
     }
 }
