@@ -12,7 +12,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./nginx:/etc/nginx/conf.d/
+      - /home/rohang/devops-project/nginx:/etc/nginx/conf.d/ 
     depends_on:
       - node-app
     networks:
