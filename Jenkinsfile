@@ -5,7 +5,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git branch: 'main', git 'https://github.com/Rohan0125/node-app-docker'
+                git branch: 'main', url: 'https://github.com/Rohan0125/node-app-docker'
             }
         }
 
