@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Code') {
             steps {
-                git 'https://github.com/Rohan0125/node-app-docker'
+                git branch: 'main', url: 'https://github.com/Rohan0125/node-app-docker'
             }
         }
 
