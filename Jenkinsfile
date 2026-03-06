@@ -3,7 +3,7 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_NAME = "rohan1250/node-devops-app"
+        IMAGE_NAME = "rohang1250/node-devops-app"
     }
 
     stages {
