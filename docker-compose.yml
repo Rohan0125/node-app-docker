@@ -1,7 +1,7 @@
 services:
 
   node-app:
-    build: ./app
+    image: rohan0125/node-devops-app
     container_name: node-app
     networks:
       - devops-net
